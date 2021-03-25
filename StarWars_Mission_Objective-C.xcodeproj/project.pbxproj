@@ -16,6 +16,7 @@
 		5FA3649A260C4BCF0037023D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FA36499260C4BCF0037023D /* main.m */; };
 		5FA364A4260C4BCF0037023D /* StarWars_Mission_Objective_CTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FA364A3260C4BCF0037023D /* StarWars_Mission_Objective_CTests.m */; };
 		5FA364AF260C4BCF0037023D /* StarWars_Mission_Objective_CUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FA364AE260C4BCF0037023D /* StarWars_Mission_Objective_CUITests.m */; };
+		5FA364C2260C56390037023D /* Mission.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FA364C1260C56390037023D /* Mission.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		5FA364AA260C4BCF0037023D /* StarWars_Mission_Objective-CUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "StarWars_Mission_Objective-CUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FA364AE260C4BCF0037023D /* StarWars_Mission_Objective_CUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarWars_Mission_Objective_CUITests.m; sourceTree = "<group>"; };
 		5FA364B0260C4BCF0037023D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FA364C0260C56390037023D /* Mission.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mission.h; sourceTree = "<group>"; };
+		5FA364C1260C56390037023D /* Mission.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mission.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 				5FA36495260C4BCF0037023D /* LaunchScreen.storyboard */,
 				5FA36498260C4BCF0037023D /* Info.plist */,
 				5FA36499260C4BCF0037023D /* main.m */,
+				5FA364C0260C56390037023D /* Mission.h */,
+				5FA364C1260C56390037023D /* Mission.m */,
 			);
 			path = "StarWars_Mission_Objective-C";
 			sourceTree = "<group>";
@@ -266,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FA364C2260C56390037023D /* Mission.m in Sources */,
 				5FA3648F260C4BCE0037023D /* ViewController.m in Sources */,
 				5FA36489260C4BCE0037023D /* AppDelegate.m in Sources */,
 				5FA3649A260C4BCF0037023D /* main.m in Sources */,
