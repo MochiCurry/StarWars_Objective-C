@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Mission : NSObject
 
 //@property (strong, nonatomic) NSNumber *id;
-//@property (strong, nonatomic) NSString *description;
+@property (strong, nonatomic) NSString *missionDescription;
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSString *timestamp;
 @property (strong, nonatomic) NSString *image;

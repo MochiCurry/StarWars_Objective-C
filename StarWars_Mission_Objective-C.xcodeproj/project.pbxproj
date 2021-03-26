@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,10 @@
 		5FA364A4260C4BCF0037023D /* StarWars_Mission_Objective_CTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FA364A3260C4BCF0037023D /* StarWars_Mission_Objective_CTests.m */; };
 		5FA364AF260C4BCF0037023D /* StarWars_Mission_Objective_CUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FA364AE260C4BCF0037023D /* StarWars_Mission_Objective_CUITests.m */; };
 		5FA364C2260C56390037023D /* Mission.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FA364C1260C56390037023D /* Mission.m */; };
+		5FA364DD260D144C0037023D /* HomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FA364DC260D144C0037023D /* HomeCollectionViewCell.m */; };
+		5FA364EC260D2DB30037023D /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FA364EB260D2DB30037023D /* DetailViewController.m */; };
+		5FA364F2260D2FC20037023D /* DetailCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FA364F1260D2FC20037023D /* DetailCollectionViewCell.m */; };
+		5FA364FF260D38730037023D /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 5FA364FE260D38730037023D /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,12 @@
 		5FA364B0260C4BCF0037023D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5FA364C0260C56390037023D /* Mission.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mission.h; sourceTree = "<group>"; };
 		5FA364C1260C56390037023D /* Mission.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mission.m; sourceTree = "<group>"; };
+		5FA364DB260D144C0037023D /* HomeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeCollectionViewCell.h; sourceTree = "<group>"; };
+		5FA364DC260D144C0037023D /* HomeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeCollectionViewCell.m; sourceTree = "<group>"; };
+		5FA364EA260D2DB30037023D /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		5FA364EB260D2DB30037023D /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		5FA364F0260D2FC20037023D /* DetailCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailCollectionViewCell.h; sourceTree = "<group>"; };
+		5FA364F1260D2FC20037023D /* DetailCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FA364FF260D38730037023D /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,19 +118,19 @@
 		5FA36486260C4BCE0037023D /* StarWars_Mission_Objective-C */ = {
 			isa = PBXGroup;
 			children = (
+				5FA364F9260D328F0037023D /* NetworkManager */,
+				5FA364E3260D22920037023D /* Controller */,
+				5FA364E2260D228A0037023D /* Model */,
+				5FA364E1260D22840037023D /* View */,
 				5FA36487260C4BCE0037023D /* AppDelegate.h */,
 				5FA36488260C4BCE0037023D /* AppDelegate.m */,
 				5FA3648A260C4BCE0037023D /* SceneDelegate.h */,
 				5FA3648B260C4BCE0037023D /* SceneDelegate.m */,
-				5FA3648D260C4BCE0037023D /* ViewController.h */,
-				5FA3648E260C4BCE0037023D /* ViewController.m */,
 				5FA36490260C4BCE0037023D /* Main.storyboard */,
 				5FA36493260C4BCF0037023D /* Assets.xcassets */,
 				5FA36495260C4BCF0037023D /* LaunchScreen.storyboard */,
 				5FA36498260C4BCF0037023D /* Info.plist */,
 				5FA36499260C4BCF0037023D /* main.m */,
-				5FA364C0260C56390037023D /* Mission.h */,
-				5FA364C1260C56390037023D /* Mission.m */,
 			);
 			path = "StarWars_Mission_Objective-C";
 			sourceTree = "<group>";
@@ -142,6 +153,44 @@
 			path = "StarWars_Mission_Objective-CUITests";
 			sourceTree = "<group>";
 		};
+		5FA364E1260D22840037023D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5FA364DB260D144C0037023D /* HomeCollectionViewCell.h */,
+				5FA364DC260D144C0037023D /* HomeCollectionViewCell.m */,
+				5FA364F0260D2FC20037023D /* DetailCollectionViewCell.h */,
+				5FA364F1260D2FC20037023D /* DetailCollectionViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5FA364E2260D228A0037023D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5FA364C0260C56390037023D /* Mission.h */,
+				5FA364C1260C56390037023D /* Mission.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5FA364E3260D22920037023D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5FA3648D260C4BCE0037023D /* ViewController.h */,
+				5FA3648E260C4BCE0037023D /* ViewController.m */,
+				5FA364EA260D2DB30037023D /* DetailViewController.h */,
+				5FA364EB260D2DB30037023D /* DetailViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5FA364F9260D328F0037023D /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -158,6 +207,9 @@
 			dependencies = (
 			);
 			name = "StarWars_Mission_Objective-C";
+			packageProductDependencies = (
+				5FA364FE260D38730037023D /* SDWebImage */,
+			);
 			productName = "StarWars_Mission_Objective-C";
 			productReference = 5FA36484260C4BCE0037023D /* StarWars_Mission_Objective-C.app */;
 			productType = "com.apple.product-type.application";
@@ -228,6 +280,9 @@
 				Base,
 			);
 			mainGroup = 5FA3647B260C4BCD0037023D;
+			packageReferences = (
+				5FA364FD260D38730037023D /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 5FA36485260C4BCE0037023D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -276,6 +331,9 @@
 				5FA36489260C4BCE0037023D /* AppDelegate.m in Sources */,
 				5FA3649A260C4BCF0037023D /* main.m in Sources */,
 				5FA3648C260C4BCE0037023D /* SceneDelegate.m in Sources */,
+				5FA364DD260D144C0037023D /* HomeCollectionViewCell.m in Sources */,
+				5FA364EC260D2DB30037023D /* DetailViewController.m in Sources */,
+				5FA364F2260D2FC20037023D /* DetailCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,6 +652,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5FA364FD260D38730037023D /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5FA364FE260D38730037023D /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5FA364FD260D38730037023D /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5FA3647C260C4BCD0037023D /* Project object */;
 }
