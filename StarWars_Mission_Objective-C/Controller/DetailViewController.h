@@ -6,15 +6,22 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Mission.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 //@interface DetailViewController : UIViewController
 
+
 @interface DetailViewController : UIViewController<UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 {
     UICollectionView *collectionView;
 }
+
+@property (strong, nonatomic) Mission *mission;
+
+@property (nonatomic, readonly) UICollectionView *collectionView;
+@property (nonatomic, readonly) UICollectionReusableView *header;
 
 @end
 

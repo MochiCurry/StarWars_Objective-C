@@ -116,14 +116,15 @@ NSString *cellId = @"cellId";
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
 
     Mission *mission = self.missions[indexPath.item];
-    NSLog(@"TAPPED");
     
-    
-//    DetailViewController *vc = [[DetailViewController alloc] init];
-    DetailViewController* vc = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailViewController"];
+    DetailViewController *vc = [[DetailViewController alloc] init];
+//    DetailViewController* vc = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailViewController"];
+    vc.mission = mission;
 
-//    [self presentViewController:vc animated:YES completion:nil];
     [self.navigationController pushViewController:vc animated:YES];
+    //    [self presentViewController:vc animated:YES completion:nil];
+
+
 
 }
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath

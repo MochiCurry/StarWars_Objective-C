@@ -11,8 +11,6 @@
 
 @interface HomeCollectionViewCell (MyPrivateMethods)
 
--(void)configure:(Mission *) item;
-
 @end
 
 @implementation HomeCollectionViewCell
@@ -31,9 +29,13 @@
 
 -(void)configure:(Mission *) item {
         
-    NSLog(item.image);
-    [_imageView sd_setImageWithURL:[NSURL URLWithString:item.image]
-                 placeholderImage:[UIImage imageNamed:@"Empire"]];
+    if (item.image != nil) {
+        [_imageView sd_setImageWithURL:[NSURL URLWithString:item.image]
+                     placeholderImage:[UIImage imageNamed:@"Empire"]];
+    } else {
+        _imageView.image = [UIImage imageNamed:@"Empire"];
+    }
+   
     _date.text = item.date;
     _title.text = item.title;
     _location.text = item.locationline1;
@@ -76,6 +78,7 @@
     [self addSubview:_title];
     _title.translatesAutoresizingMaskIntoConstraints = NO;
     _title.textColor = UIColor.whiteColor;
+    _title.numberOfLines = 2;
     _title.font = [UIFont boldSystemFontOfSize:24.0f];
     [_title.topAnchor constraintEqualToAnchor:self.date.bottomAnchor constant:20.0].active = YES;
     [_title.leadingAnchor constraintEqualToAnchor:self.contentView.leadingAnchor constant:20.0].active = YES;
@@ -98,11 +101,6 @@
     [_missionDescription.leadingAnchor constraintEqualToAnchor:self.contentView.leadingAnchor constant:20.0].active = YES;
     [_missionDescription.trailingAnchor constraintEqualToAnchor:self.contentView.trailingAnchor constant:-20.0].active = YES;
     
-    
-
-
-
-
 
 }
 

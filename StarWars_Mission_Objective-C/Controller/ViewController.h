@@ -6,7 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "DetailViewController.h"
 //@interface ViewController : UITableViewController
 
 @interface ViewController : UIViewController<UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>

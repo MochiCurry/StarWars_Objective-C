@@ -7,6 +7,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "DetailViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,6 +22,7 @@
     self.window = UIWindow.new;
     [self.window makeKeyAndVisible];
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:ViewController.new];
+    
     return YES;
 
 }

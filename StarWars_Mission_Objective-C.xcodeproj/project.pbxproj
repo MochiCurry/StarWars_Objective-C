@@ -21,6 +21,8 @@
 		5FA364EC260D2DB30037023D /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FA364EB260D2DB30037023D /* DetailViewController.m */; };
 		5FA364F2260D2FC20037023D /* DetailCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FA364F1260D2FC20037023D /* DetailCollectionViewCell.m */; };
 		5FA364FF260D38730037023D /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 5FA364FE260D38730037023D /* SDWebImage */; };
+		5FA3650C260FB12D0037023D /* DetailCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FA3650B260FB12D0037023D /* DetailCollectionReusableView.m */; };
+		5FA36511260FDD9C0037023D /* StretchyHeaderCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FA36510260FDD9C0037023D /* StretchyHeaderCollectionViewLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,10 @@
 		5FA364EB260D2DB30037023D /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		5FA364F0260D2FC20037023D /* DetailCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailCollectionViewCell.h; sourceTree = "<group>"; };
 		5FA364F1260D2FC20037023D /* DetailCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailCollectionViewCell.m; sourceTree = "<group>"; };
+		5FA3650A260FB12D0037023D /* DetailCollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailCollectionReusableView.h; sourceTree = "<group>"; };
+		5FA3650B260FB12D0037023D /* DetailCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailCollectionReusableView.m; sourceTree = "<group>"; };
+		5FA36510260FDD9C0037023D /* StretchyHeaderCollectionViewLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StretchyHeaderCollectionViewLayout.m; sourceTree = "<group>"; };
+		5FA36515260FDDC80037023D /* StretchyHeaderCollectionViewLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StretchyHeaderCollectionViewLayout.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +166,8 @@
 				5FA364DC260D144C0037023D /* HomeCollectionViewCell.m */,
 				5FA364F0260D2FC20037023D /* DetailCollectionViewCell.h */,
 				5FA364F1260D2FC20037023D /* DetailCollectionViewCell.m */,
+				5FA3650A260FB12D0037023D /* DetailCollectionReusableView.h */,
+				5FA3650B260FB12D0037023D /* DetailCollectionReusableView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -180,6 +188,8 @@
 				5FA3648E260C4BCE0037023D /* ViewController.m */,
 				5FA364EA260D2DB30037023D /* DetailViewController.h */,
 				5FA364EB260D2DB30037023D /* DetailViewController.m */,
+				5FA36515260FDDC80037023D /* StretchyHeaderCollectionViewLayout.h */,
+				5FA36510260FDD9C0037023D /* StretchyHeaderCollectionViewLayout.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -329,9 +339,11 @@
 				5FA364C2260C56390037023D /* Mission.m in Sources */,
 				5FA3648F260C4BCE0037023D /* ViewController.m in Sources */,
 				5FA36489260C4BCE0037023D /* AppDelegate.m in Sources */,
+				5FA36511260FDD9C0037023D /* StretchyHeaderCollectionViewLayout.m in Sources */,
 				5FA3649A260C4BCF0037023D /* main.m in Sources */,
 				5FA3648C260C4BCE0037023D /* SceneDelegate.m in Sources */,
 				5FA364DD260D144C0037023D /* HomeCollectionViewCell.m in Sources */,
+				5FA3650C260FB12D0037023D /* DetailCollectionReusableView.m in Sources */,
 				5FA364EC260D2DB30037023D /* DetailViewController.m in Sources */,
 				5FA364F2260D2FC20037023D /* DetailCollectionViewCell.m in Sources */,
 			);
