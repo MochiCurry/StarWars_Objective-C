@@ -21,13 +21,17 @@
 
 NSString *cellId = @"cellId";
 
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     [self fetchData];
 
+    self.navigationItem.title = @"Star Wars";
+    self.navigationController.navigationBar.prefersLargeTitles = YES;
+    self.navigationController.navigationBarHidden = NO;
+
+    
     self.view = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     UICollectionViewFlowLayout *layout=[[UICollectionViewFlowLayout alloc] init];
@@ -36,11 +40,16 @@ NSString *cellId = @"cellId";
     [collectionView setDelegate:self];
     
     [collectionView registerClass:[HomeCollectionViewCell class] forCellWithReuseIdentifier:cellId];
-    [collectionView setBackgroundColor:[UIColor redColor]];
+    [collectionView setBackgroundColor:[UIColor whiteColor]];
     
     [self.view addSubview:collectionView];
     
-    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+
+    self.navigationController.navigationBarHidden = NO;
+//    [self.navigationController setNavigationBarHidden:NO animated:NO];
 }
 
 
@@ -65,12 +74,14 @@ NSString *cellId = @"cellId";
             NSString *date = missionDict[@"date"];
             NSString *location = missionDict[@"locationline1"];
             NSString *description = missionDict[@"description"];
+            NSString *imageUrl = missionDict[@"image"];
             
             Mission *mission = Mission.new;
             mission.title = title;
             mission.date = date;
             mission.locationline1 = location;
             mission.missionDescription = description;
+            mission.image = imageUrl;
         
             [missions addObject:mission];
         }
@@ -96,14 +107,8 @@ NSString *cellId = @"cellId";
     
     Mission *mission = self.missions[indexPath.item];
     
-    cell.title.text = mission.title;
-    cell.date.text = mission.date;
-    cell.location.text = mission.locationline1;
-    cell.missionDescription.text = mission.missionDescription;
-    
-    
-    cell.image.image = [UIImage systemImageNamed:@"person"];
-    
+    [cell configure: mission];
+     
 //    cell.backgroundColor=[UIColor greenColor];
     return cell;
 }
@@ -114,13 +119,36 @@ NSString *cellId = @"cellId";
     NSLog(@"TAPPED");
     
     
-    UIViewController *vc = [[DetailViewController alloc] init];
+//    DetailViewController *vc = [[DetailViewController alloc] init];
+    DetailViewController* vc = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailViewController"];
+
+//    [self presentViewController:vc animated:YES completion:nil];
     [self.navigationController pushViewController:vc animated:YES];
+
 }
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(self.view.frame.size.width, 200);
+    return CGSizeMake(self.view.frame.size.width - 24, 200);
 }
+
+
+///Dismiss keyboard.
+//-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//    [self.view endEditing:YES];
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //
 //- (void)viewDidLoad {
