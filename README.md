@@ -1,5 +1,4 @@
 # StarWars_Objective-C
-Uses Objective-C
 
 In Progress...
 
@@ -12,7 +11,7 @@ The Objective-C equivalent of StarWars_Mission (https://github.com/MochiCurry/St
 ## Things added from Swift equivalent
   1. Stretchy Header Cell
 
-## Swift Package Dependencies
+## Package Dependencies
     SDWebImage (https://github.com/SDWebImage/SDWebImage.git)
     
 ## Versions
