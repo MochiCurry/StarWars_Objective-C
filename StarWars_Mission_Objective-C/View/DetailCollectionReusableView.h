@@ -12,7 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DetailCollectionReusableView : UICollectionReusableView
 
+@property (strong, nonatomic) UIImageView *imageView;
 @property (strong, nonatomic) UILabel *title;
+@property (strong, nonatomic) UIButton *backButton;
+@property (strong, nonatomic) UIButton *shareButton;
+
+-(void)configure:(NSString *) imageUrl;
 
 @end
 

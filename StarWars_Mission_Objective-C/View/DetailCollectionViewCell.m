@@ -17,6 +17,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self setup];
+//        self.contentView.translatesAutoresizingMaskIntoConstraints = false;
     }
     return self;
 }
@@ -35,6 +36,14 @@
     _location.text = item.locationline1;
     _missionDescription.text = item.missionDescription;
 }
+
+
+//- (CGSize)systemLayoutSizeFittingSize:(CGSize)targetSize {
+//    
+//    return self.contentView.layou
+//}
+
+
 
 
 -(void)setup {

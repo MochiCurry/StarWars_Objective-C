@@ -113,7 +113,7 @@ NSString *cellId = @"cellId";
     return cell;
 }
 
--(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
 
     Mission *mission = self.missions[indexPath.item];
     
@@ -129,9 +129,56 @@ NSString *cellId = @"cellId";
 }
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(self.view.frame.size.width - 24, 200);
+    return CGSizeMake(self.view.frame.size.width - 24, 250);
 }
 
+
+
+
+
+
+
+
+
+
+- (void)willTransitionToTraitCollection:(UITraitCollection *)newCollection withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
+    [collectionView.collectionViewLayout invalidateLayout];
+
+}
+
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
+    
+    [collectionView.collectionViewLayout invalidateLayout];
+    
+//    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+//    UICollectionViewLayout *flowlayout = collectionView.collectionViewLayout;
+//    [flowlayout invalidateLayout];
+}
+
+
+//- (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds {
+//
+//    if(!CGRectIsNull(collectionView.bounds)) {
+//        CGRect oldBounds = collectionView.bounds;
+//
+//        if(newBounds.size != oldBounds.size) {
+//            return true;
+//        }
+//    }
+//
+//    return [super shouldAutorotate];
+//
+//}
+//
+//override func shouldInvalidateLayoutForBoundsChange(newBounds: CGRect) -> Bool {
+//    invalidateLayoutWithContext(invalidationContextForBoundsChange(newBounds))
+//    return super.shouldInvalidateLayoutForBoundsChange(newBounds)
+//}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    [collectionView.collectionViewLayout invalidateLayout];
+}
 
 ///Dismiss keyboard.
 //-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -141,72 +188,5 @@ NSString *cellId = @"cellId";
 
 
 
-
-
-
-
-
-
-
-
-
-
-//
-//- (void)viewDidLoad {
-//    [super viewDidLoad];
-//
-//    [self fetchData];table
-//
-//    self.navigationItem.title = @"Curry";
-//    self.navigationController.navigationBar.prefersLargeTitles = YES;
-//
-//    [self.tableView registerClass:UITableViewCell.class forCellReuseIdentifier: cellId];
-//}
-//
-//- (void)fetchData {
-//    NSString *urlString = @"https://raw.githubusercontent.com/MochiCurry/mockjson/main/StarWars.json";
-//    NSURL *url = [NSURL URLWithString: urlString];
-//
-//    [[NSURLSession.sharedSession dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-//
-//        NSError *err;
-//        NSArray *missionJSON = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&err];
-//        if (err){
-//            NSLog(@"Failed to serialize into JSON: %@", err);
-//            return;
-//        }
-//
-//        NSMutableArray<Mission *> *missions = NSMutableArray.new;
-//        for (NSDictionary *courseDict in missionJSON) {
-//            NSString *title = courseDict[@"title"];
-//            NSString *date = courseDict[@"date"];
-//            Mission *mission = Mission.new;
-//            mission.title = title;
-//            mission.date = date;
-//            [missions addObject:mission];
-//        }
-//
-//        self.missions = missions;
-//
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            [self.tableView reloadData];
-//        });
-//    }] resume];
-//}
-//
-//
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//    return self.missions.count;
-//}
-//
-//-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//
-//    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellId];
-//    Mission *mission = self.missions[indexPath.row];
-//
-//    cell.textLabel.text = mission.title;
-//    cell.detailTextLabel.text = mission.description;
-//    return cell;
-//}
 
 @end

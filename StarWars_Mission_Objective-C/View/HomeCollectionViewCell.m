@@ -29,11 +29,11 @@
 
 -(void)configure:(Mission *) item {
         
-    if (item.image != nil) {
+    if ([item.image isEqual: [NSNull null]]) {
+        _imageView.image = [UIImage imageNamed:@"Empire"];
+    } else {
         [_imageView sd_setImageWithURL:[NSURL URLWithString:item.image]
                      placeholderImage:[UIImage imageNamed:@"Empire"]];
-    } else {
-        _imageView.image = [UIImage imageNamed:@"Empire"];
     }
    
     _date.text = item.date;
@@ -88,18 +88,22 @@
     [self addSubview:_location];
     _location.translatesAutoresizingMaskIntoConstraints = NO;
     _location.textColor = UIColor.whiteColor;
-    [_location.topAnchor constraintEqualToAnchor:self.title.bottomAnchor constant:24.0].active = YES;
+//    [_location.topAnchor constraintEqualToAnchor:self.title.bottomAnchor constant:24.0].active = YES;
     [_location.leadingAnchor constraintEqualToAnchor:self.contentView.leadingAnchor constant:20.0].active = YES;
     [_location.trailingAnchor constraintEqualToAnchor:self.contentView.trailingAnchor constant:-20.0].active = YES;
-    
+
     _missionDescription = [UILabel new];
     _missionDescription.numberOfLines = 2;
     [self addSubview:_missionDescription];
     _missionDescription.translatesAutoresizingMaskIntoConstraints = NO;
     _missionDescription.textColor = UIColor.whiteColor;
-    [_missionDescription.topAnchor constraintEqualToAnchor:self.location.bottomAnchor constant:14.0].active = YES;
+//    [_missionDescription.topAnchor constraintEqualToAnchor:self.location.bottomAnchor constant:14.0].active = YES;
     [_missionDescription.leadingAnchor constraintEqualToAnchor:self.contentView.leadingAnchor constant:20.0].active = YES;
     [_missionDescription.trailingAnchor constraintEqualToAnchor:self.contentView.trailingAnchor constant:-20.0].active = YES;
+    [_missionDescription.bottomAnchor constraintEqualToAnchor:self.contentView.bottomAnchor constant:-20.0].active = YES;
+
+    [_location.bottomAnchor constraintEqualToAnchor:self.missionDescription.topAnchor constant:-10.0].active = YES;
+
     
 
 }

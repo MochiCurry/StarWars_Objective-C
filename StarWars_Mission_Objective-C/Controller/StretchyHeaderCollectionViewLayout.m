@@ -31,7 +31,7 @@
     if (offset.y < minY) {
         
         CGSize  headerSize = [self headerReferenceSize];
-        CGFloat deltaY = fabsf(offset.y - minY);
+        CGFloat deltaY = fabs(offset.y - minY);
         
         for (UICollectionViewLayoutAttributes *attrs in attributes) {
             
