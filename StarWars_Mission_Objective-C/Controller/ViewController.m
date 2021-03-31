@@ -134,13 +134,6 @@ NSString *cellId = @"cellId";
 
 
 
-
-
-
-
-
-
-
 - (void)willTransitionToTraitCollection:(UITraitCollection *)newCollection withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
     [collectionView.collectionViewLayout invalidateLayout];
 
@@ -156,34 +149,10 @@ NSString *cellId = @"cellId";
 }
 
 
-//- (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds {
-//
-//    if(!CGRectIsNull(collectionView.bounds)) {
-//        CGRect oldBounds = collectionView.bounds;
-//
-//        if(newBounds.size != oldBounds.size) {
-//            return true;
-//        }
-//    }
-//
-//    return [super shouldAutorotate];
-//
-//}
-//
-//override func shouldInvalidateLayoutForBoundsChange(newBounds: CGRect) -> Bool {
-//    invalidateLayoutWithContext(invalidationContextForBoundsChange(newBounds))
-//    return super.shouldInvalidateLayoutForBoundsChange(newBounds)
-//}
-
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     [collectionView.collectionViewLayout invalidateLayout];
 }
-
-///Dismiss keyboard.
-//-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-//    [self.view endEditing:YES];
-//}
 
 
 
