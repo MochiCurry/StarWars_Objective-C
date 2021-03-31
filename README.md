@@ -5,8 +5,8 @@ In Progress...
 The Objective-C equivalent of StarWars_Mission (https://github.com/MochiCurry/StarWars_Mission)
 
 ## Things to work on:
-  1. Support all device orientations.
-  2. Dynamic CollectionViewCell sizing.
+  1. Support all device orientations. (Works on Swift version)
+  2. Dynamic CollectionViewCell sizing. (Works on Swift version)
 
 ## Things added from Swift equivalent
   1. Stretchy Header Cell
